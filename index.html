@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ddc3ee268a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cc9db0f074.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Red+Hat+Display&family=Sassy+Frass&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@500;700&display=swap"
+        rel="stylesheet" />
+    <title>C</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+
+</head>
+<style>
+    body {
+        background-color: #000000;
+    }
+
+    .back {
+        background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/103/300/original/Untitled.png?1699415259');
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .hero {
+        background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/606/original/Untitled_copy.png?1698871467');
+        background-size: cover;
+        text-align: center;
+        padding: 105px;
+        margin-top: -70px;
+        border-radius: 12px;
+
+    }
+
+    section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        animation: animate 9s ease-in-out infinite;
+    }
+
+
+    section .star {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        animation: animate 9s ease-in-out infinite;
+
+    }
+
+    section .star.star1 {
+
+        animation-delay: 0s;
+        background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/717/original/star1.png?1698954426');
+
+
+    }
+
+    section .star.star2 {
+
+        animation-delay: -1s;
+        background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/722/original/star2.png?1698956798');
+
+
+    }
+
+    section .star.star3 {
+
+        animation-delay: -2s;
+        background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/724/original/star3.png?1698956885');
+
+    }
+
+    section .star.star4 {
+
+        animation-delay: -3s;
+        background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/728/original/star4.png?1698956907');
+
+    }
+
+    section .star.star5 {
+
+        animation-delay: -4s;
+        background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/729/original/star5.png?1698956924');
+
+    }
+
+    section .star.star6 {
+
+        animation-delay: -5s;
+        background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/730/original/star6.png?1698956955');
+
+    }
+
+    section .star.star7 {
+
+        animation-delay: -6s;
+        background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/731/original/star7.png?1698956973');
+
+    }
+
+    section .star.star8 {
+
+        animation-delay: -7s;
+        background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/732/original/star8.png?1698956993');
+
+    }
+
+    @keyframes animate {
+
+        0%,
+        20%,
+        40%,
+        60%,
+        80%,
+        100% {
+            opacity: 0;
+        }
+
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+            opacity: 0.8;
+        }
+    }
+
+
+    .code {
+
+        text-align: center;
+
+
+        color: aliceblue;
+
+
+
+        font-family: 'Red Hat Display', sans-serif;
+
+
+    }
+
+    .coder {
+        text-align: left;
+        margin-left: -400px;
+        color: rgb(0, 0, 0);
+        font-family: 'Red Hat Display', sans-serif;
+        white-space: nowrap;
+        position: relative;
+        left: 50%;
+        transform: translateX(50%);
+    }
+
+
+
+
+    .nine {
+
+
+        font-size: 20px;
+        color: rgb(0, 145, 255);
+    }
+
+    h2 {
+
+        text-align: center;
+
+
+        color: aliceblue;
+
+
+
+        font-family: 'Red Hat Display', sans-serif;
+
+    }
+
+
+
+
+    .button {
+        padding: 20px;
+        border: 2px solid #0fb9cc;
+        border-radius: 12px;
+        background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(86, 255, 248) 78.4%);
+        color: aliceblue;
+        font-family: 'Red Hat Display', sans-serif;
+
+        margin: 22px;
+
+    }
+
+    .bottom-bar {
+        width: 100%;
+        height: 5px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(100deg, rgb(51, 10, 233), rgb(0, 123, 255), rgb(226, 34, 244));
+        filter: brightness(9.8) blur(1.8);
+        background-size: 300% 100%;
+        animation: glowAndMove 1s linear infinite, gradientMove 8s linear infinite;
+    }
+
+    @keyframes glowAndMove {
+
+        0%,
+        100% {
+            background-position: 0% 0;
+        }
+
+        25% {
+            background-position: 100% 0;
+        }
+
+        50% {
+            background-position: 100% 100%;
+        }
+
+        75% {
+            background-position: 0% 100%;
+        }
+    }
+
+    @keyframes gradientMove {
+        0% {
+            background-position: 100% 0;
+        }
+
+        100% {
+            background-position: -100% 0;
+        }
+    }
+
+    .soar {
+        color: rgb(0, 0, 0);
+        font-family: 'Red Hat Display', sans-serif;
+        margin-top: 22px;
+    }
+
+    .images {
+
+
+        background-color: black;
+        margin-top: 22px;
+        border-radius: 12px;
+
+    }
+
+    .eyes {
+        animation: start 1s ease-in-out infinite alternate;
+
+        color: white;
+    }
+
+
+    @keyframes start {
+        from {
+            text-shadow: 0 0 60px #0f00e6;
+        }
+
+        to {
+            text-shadow: 0 0 30px #00fffb, 0 0 10px #00d0ff;
+        }
+    }
+
+    .rue {
+        font-size: small;
+        text-align: center;
+        font-family: 'Red Hat Display', sans-serif;
+        color: rgb(0, 145, 255);
+    }
+
+
+
+
+
+    .navbar {
+        border: 1px solid rgb(202, 174, 174);
+        border-radius: 12px;
+        animation: glow 1s infinite alternate;
+    }
+
+
+
+
+    img {
+        max-width: 100%;
+        padding: 20px;
+
+
+
+
+    }
+
+
+    .paper {
+
+
+        background-color: #fff;
+
+
+        border: 12px solid #fff;
+        border-radius: 8px;
+
+        margin-top: 22px;
+
+    }
+
+    .range {
+
+
+        border: 1px solid #f1b;
+        margin-top: 18px;
+        border-radius: 18px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .range:hover {
+        transform: scale(1.1);
+    }
+
+    .wrapper {
+        background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/609/original/Untitled_copy_3.png?1698876439');
+        background-size: 100% auto;
+        background-position: center;
+        border-radius: 22px;
+        height: 100vh;
+
+
+
+    }
+
+    .ara {
+        border: 9px;
+        border-radius: 12px;
+        padding: 19px;
+
+        color: rgb(0, 0, 0);
+        background-color: white;
+        font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .lets {
+        text-align: center;
+        font-size: 12px;
+        padding-top: 12px;
+        background-color: white;
+        border: 6px;
+        border-radius: 12px;
+        margin: 20px;
+
+
+    }
+
+
+    .col-6 {
+        position: relative;
+        z-index: 1;
+    }
+
+    .green-text {
+
+        color: rgb(46, 255, 46);
+    }
+
+
+    .col-6 {
+        margin: 0 auto;
+    }
+
+    @media (max-width: 798px) {
+        .col-6 {
+            margin: 0 auto;
+        }
+    }
+
+    .container {
+
+
+        margin: 0 auto;
+    }
+</style>
+
+<body class="back">
+
+
+
+
+
+
+    <div class="bottom-bar">
+        <div class="color-box red"></div>
+        <div class="color-box green"></div>
+        <div class="color-box blue"></div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="hero">
+                <h1 class="code">My Coding Journey</h1>
+
+            </div>
+
+
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6">
+
+                        <a href="
+https://iridescent-pie-4db5f0.netlify.app/  
+" title="click here" target="_blank">
+                            <img class="range"
+                                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/103/995/original/Screenshot_2023-11-14_at_2.58.59_PM.png?1699991987"
+                                alt="" srcset="">
+
+                        </a>
+
+                    </div>
+                    <div class="col-md-6">
+                        <p class="paper">
+                            My coding journey as a web developer has been an exciting adventure! Starting from scratch,
+                            I dived into HTML and CSS. I
+                            personally find coding, in general, very unique to the human experience, especially because
+                            it is something that
+                            continues to grow, advance, and accelerate at a pace we have never seen. It will only
+                            continue to become more amazing in
+                            the nearby future, and I want to be a part of that in any way, shape, or form I can. And, of
+                            course, SheCodes, above all
+                            else, has made me develop a passion for code. I love seeing so many women advance their own
+                            careers and gain knowledge
+                            from the SheCodes program. It truly has been the catalyst for me and many others to get all
+                            the information we need.
+
+                            <button class="button">Stars</button>
+
+                        </p>
+                    </div>
+
+                    <div class="wrapper mt-5">
+
+                        <div class="col-md-6">
+
+                            <div class="d-flex justify-content-center align-items-center flex-column">
+
+                                <h2 class="soar">One of my Favourite Shecodes projects</h2>
+
+                                <a href="
+https://fancy-bonbon-56aa0e.netlify.app/   
+" title="click here" target="_blank">
+                                    <img class="range"
+                                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/103/972/original/Screenshot_2023-11-14_at_12.58.38_PM.png?1699985247"
+                                        alt="" srcset="" target="_blank">
+
+                                </a>
+                                <p class="lets">
+                                    My React dictionary project was created using a combination of JavaScript, CSS, and
+                                    HTML, it is a testament to my coding
+                                    prowess and creativity. Through my diligent efforts, I've seamlessly integrated
+                                    these web technologies to craft a
+                                    user-friendly and visually appealing dictionary. The use of JavaScript likely
+                                    enhances the interactivity of the
+                                    dictionary, providing users with a dynamic and responsive experience. Meanwhile, the
+                                    thoughtful application of CSS
+                                    ensures an aesthetically pleasing design, contributing to an engaging user
+                                    interface. Overall, my dictionary project
+                                    showcases not only your technical skills but also your ability to combine various
+                                    elements to deliver a well-rounded and
+                                    enjoyable digital experience for users interacting with language and information.
+                                </p>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h2 class="eyes">Fun facts about code</h2>
+                                <ul class="ara">
+                                    <li><b>1.</b> Ada Lovelace, an English mathematician, is considered the world's
+                                        first computer programmer.</li>
+                                    <li><b>2.</b> The term "bug" originated when an actual moth caused a computer
+                                        malfunction in 1947.</li>
+                                    <li><b>3.</b> Programmers used ASCII characters for creative expression before
+                                        graphical user interfaces.</li>
+                                    <li><b>4.</b> Code Spacesuit: The source code for the Apollo 11 guidance computer,
+                                        which helped land the first
+                                        humans on the moon, was recently uploaded to GitHub by a former NASA intern.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md-6">
+                                <img class="images"
+                                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/036/original/pexels-danny-meneses-943096.jpg?1699999396"
+                                    alt="" srcset="">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+    </div>
+
+
+    <ul class="nav justify-content-center mt-5">
+        <li class="nav-item">
+            <a class="nav-link active" href="https://www.shecodes.io/" target="_blank"
+                title="SheCodes profile">SheCodes</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="https://linkedin.com/in/athenah-c-2639251a0" target="_blank"
+                title="linkedin profile"> <i class="fa-brands fa-linkedin"></i></a>
+        </li>
+
+
+
+
+
+        <li class="nav-item ml-5">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">© 2021 SheCodes All rights
+                reserved.</a>
+        </li>
+
+
+    </ul>
+
+    <form>
+
+
+        <div class="rue">
+            <h3>🧬💻🩵This website was coded by, Athenah Coucean🧬💻🩵</h3>
+
+        </div>
+    </form>
+    <section>
+        <div class=" star star1"></div>
+        <div class=" star star2"></div>
+        <div class=" star star3"></div>
+        <div class=" star star4"></div>
+        <div class=" star star5"></div>
+        <div class=" star star6"></div>
+        <div class=" star star7"></div>
+        <div class=" star star8"></div>
+
+    </section>
+    <script>
+
+
+
+
+
+
+
+
+
+
+function newStep (){
+
+  let body = document.querySelector("body");
+  body.classList.toggle("back");
+
+  if(body.classList.contains("back")){
+
+
+    button.textContent = "green";
+    button.classList.add("green-text");
+
+  }else{
+
+    button.textContent = "stars";
+    button.classList.remove("green-text");
+  }
+
+
+}
+
+let button = document.querySelector("button");
+
+button.addEventListener("click", newStep);
+
+
+     let hasVisited = localStorage.getItem("hasVisited");
+
+      if (!hasVisited) {
+
+        setTimeout(function () {
+          let name = prompt("What is your name?");
+          console.log("Script is running");
+          console.log("Name entered:", name);
+          alert(`Hello, ${name}! 💕💕 Take a look around and welcome to this page!`);
+
+
+          localStorage.setItem("hasVisited", "true");
+        }, 100);
+      }
+
+    </script>
+
+
+
+
+</body>
+
+</html>
